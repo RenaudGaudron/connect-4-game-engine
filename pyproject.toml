@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=67", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "connect4-engine"
+version = "0.1.0"
+description = "Minimax-based Connect 4 engine with alpha-beta pruning"
+readme = "README.md"
+authors = [{name = "Connect4 Engine Contributors"}]
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.scripts]
+connect4-engine = "connect4_engine.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
